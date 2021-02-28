@@ -97,21 +97,11 @@ Load Elfin robot model：
 $ roslaunch elfin_robot_bringup elfin3_bringup.launch
 ```
 
-Bring up the hardware of Elfin. Before bringing up the hardware, you should setup Linux with PREEMPT_RT properly. There is a [tutorial](https://wiki.linuxfoundation.org/realtime/documentation/howto/applications/preemptrt_setup). There are two versions of elfin EtherCAT slaves. Please bring up the hardware accordingly.
+Bring up the hardware of Elfin. Before bringing up the hardware, you should setup Linux with PREEMPT_RT properly. There is a [tutorial](https://wiki.linuxfoundation.org/realtime/documentation/howto/applications/preemptrt_setup).
 
 ```sh
 $ sudo chrt 10 bash
 $ roslaunch elfin_robot_bringup elfin_ros_control.launch
-```
-or
-```sh
-$ sudo chrt 10 bash
-$ roslaunch elfin_robot_bringup elfin_ros_control_v2.launch
-```
-or you bought the RS485 end robot
-```sh
-$ sudo chrt 10 bash
-$ roslaunch elfin_robot_bringup elfin_ros_control_v3.launch
 ```
 
 Start up RViz with a configuration including the MoveIt! Motion Planning plugin:
