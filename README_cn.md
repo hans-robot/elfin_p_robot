@@ -4,7 +4,7 @@ Elfin Robot
 If you don't speak chinese, please [click here](./README_english.md)
 
 <p align="center">
-  <img src="docs/images/elfin.png" />
+  <img src="docs/images/Elfin_P.png" />
 </p>
 
 
@@ -97,20 +97,11 @@ elfin_ethernet_name: eth0
 ```sh
 $ roslaunch elfin_robot_bringup elfin3_bringup.launch
 ```
-启动Elfin硬件，Elfin的控制需要操作系统的实时性支持，运行下面的命令前请先为你的Linux系统内核打好实时补丁。打补丁的方法可以参考这个[教程](http://www.jianshu.com/p/8787e45a9e01)。Elfin机械臂有两种不同版本的EtherCAT从站，在启动硬件前，请先确认你的Elfin的从站版本。
+启动Elfin硬件，Elfin的控制需要操作系统的实时性支持，运行下面的命令前请先为你的Linux系统内核打好实时补丁。打补丁的方法可以参考这个[教程](http://www.jianshu.com/p/8787e45a9e01)。
+
 ```sh
 $ sudo chrt 10 bash
 $ roslaunch elfin_robot_bringup elfin_ros_control.launch
-```
-或
-```sh
-$ sudo chrt 10 bash
-$ roslaunch elfin_robot_bringup elfin_ros_control_v2.launch
-```
-或如果购买的是RS485末端的机器人
-```sh
-$ sudo chrt 10 bash
-$ roslaunch elfin_robot_bringup elfin_ros_control_v3.launch
 ```
 
 运行MoveIt!模块, RViz界面:
